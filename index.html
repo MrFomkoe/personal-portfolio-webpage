@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/38b0698baf.js" crossorigin="anonymous"></script>
     <title>My Portfolio</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>Roman Ponomarjov</h1>
         <nav>
             <ul>
@@ -20,6 +22,7 @@
     </header>
 
     <main>
+        <!-- Section with about me description -->
         <article id="about-me">
             <div class="about-description">
                 <h2>About me</h2>
@@ -29,11 +32,11 @@
                 </p>
                 <p>
                     At the age of 29, I decided to make crucial changes in my life and change my occupation.
-                    After taking JavaScript courses at <a href="https://www.macibaspieaugusajiem.lv/" target="_blank" rel="noopener noreferrer"> Mācības pieaugušajiem</a>
+                    After taking JavaScript courses at <a href="https://www.macibaspieaugusajiem.lv/" target="_blank" rel="noopener noreferrer" title="Mācības pieaugušajiem"> Mācības pieaugušajiem</a> ("Studies for adults" EU project)
                     in September 2021 I made a conclusion that programming actually interests me and I'd wish to link my life with it. 
                 </p>
                 <p>
-                    The next step in the study of programming was courses at <a href="https://www.codecademy.com/" target="_blank" rel="noopener noreferrer">Codecademy</a>
+                    The next step in the study of programming was courses at <a href="https://www.codecademy.com/" target="_blank" rel="noopener noreferrer" title="Codeademy">Codecademy</a>
                     within the Front-End Engineer path. 
                     My objective to complete is to achieve sufficient knowledge and skills to start working as a junior developer.
                 </p>
@@ -45,25 +48,108 @@
                 <img src="./media/images/me.jpg" alt="Roman Ponomarjov">
             </div>
         </article>
+
+        <!-- Section with projects -->
         <article class="projects">
             <h2>Projects</h2>
+            
+            <!-- 1st project -->
             <section class="macibas-game">
-                <div class="description">
+                <div class="project-btn">
                     <h3>Mācības pieaugušajiem group project</h3>
-                    <div class="project-authors">
-                        <h4>Project Authors</h4>
-                        <div class="author">
-                            <p>Roman Ponomarjov</p>
-                            <a href="https://github.com/MrFomkoe" target="_blank" rel="noopener noreferrer">GitHub profile</a>
-                        </div>
-                        <div class="author"></div>
-                        <div class="author"></div>
-                    </div>
                 </div>
                 
+                <div class="project-data">
+                    
+                    <div class="project-authors">
+                        <h4 class="heading-btn">Project Authors</h4>
+                        <div class="author">
+                            <p>Roman Ponomarjov</p>
+                            <a href="https://github.com/MrFomkoe" target="_blank" rel="noopener noreferrer" title="GitHub profile">
+                                <img src="./media/images/contacts/github.png" alt="GitHub profile">
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="author">
+                            <p>Vitaliy Piskunov</p>
+                            <a href="https://github.com/VitalijsP" target="_blank" rel="noopener noreferrer" title="GitHub profile">
+                                <img src="./media/images/contacts/github.png" alt="GitHub profile">
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="author">
+                            <p>Matiss Lenert</p>
+                            <a href="https://github.com/DevCosts" target="_blank" rel="noopener noreferrer" title="GitHub profile">
+                                <img src="./media/images/contacts/github.png" alt="GitHub profile">
+                            </a>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="project-description">
+                        <h3 class="heading-btn">Project Description</h4>
+                        <a class="link-to-game" href="https://mrfomkoe.github.io/" target="_blank" rel="noopener noreferrer">Check out the game!</a>
+                        <div class="project-content">
+
+                            <div class="project-text">
+                                <p>The project is a game with several minigames in a fantasy world.</p>
+                                <p>The project itself was created with an idea to show the possibilities of various JavaScript tools including manipulation of DOM.</p>
+                                <p>This was the first-ever project created by me my colleagues from courses due to which it has numerous flaws.</p>
+                                <p>Nevertheless, the project has a potential for growth as it pre-supposes adding new minigames.</p>
+                                <p>Overall, we were fairly satisfied with the achieved results.</p>
+                            </div>
+
                 
+
+                            <div class="project-images carousel-container">
+                                <div class="carousel-slides">
+                                    <img class="carousel-slide" src="./media/images/game/game-1.jpg" alt="Game Menu">
+                                    <img class="carousel-slide" src="./media/images/game/game-2.jpg" alt="Rock Paper Scissors Game">
+                                    <img class="carousel-slide" src="./media/images/game/game-3.jpg" alt="Memory Card Game">
+                                    <img class="carousel-slide" src="./media/images/game/game-4.jpg" alt="Snake Game">
+                                </div>
+
+                                <div class="carousel-controls">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </section>
         </article>
+
+        <!-- <article class="skills">
+            <div class="skills-images">
+                <img src="./media/images/skills/html-image.png" alt="">
+                <img src="./media/images/skills/css-image.png" alt="">
+                <img src="./media/images/skills/js-image.png" alt="">
+            </div>
+        </article> -->
+
     </main>
+    <!-- <footer>
+        <div class="contacts">
+            <h2>Contact Data</h2>
+            <a href="mailto:romanponomarjov@gmail.com">
+                <img src="./media/images/contacts/email.png" alt="Email">
+            </a>
+            <a href="https://github.com/MrFomkoe" target="_blank" rel="noopener noreferrer">
+                <img src="./media/images/contacts/github.png" alt="GitHub profile">
+            </a>
+            <a href="https://www.linkedin.com/in/roman-ponomarjov-08ba1bb2/" target="_blank" rel="noopener noreferrer">
+                <img src="./media/images/contacts/lin-in.png" alt="LinkedIn profile">
+            </a>
+            <a href="https://www.instagram.com/romanponomarjov/" target="_blank" rel="noopener noreferrer">
+                <img src="./media/images/contacts/instagram.png" alt="instagram profile">
+            </a>
+            <a href="https://www.facebook.com/roman.ponomarjov" target="_blank" rel="noopener noreferrer">
+                <img src="./media/images/contacts/facebook.png" alt="facebook profile">
+            </a>
+        </div>
+    </footer> -->
 </body>
 </html>

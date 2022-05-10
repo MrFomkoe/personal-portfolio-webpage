@@ -1,0 +1,213 @@
+/* 1 General setting */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify; /* For Edge */
+    box-sizing: border-box;
+}
+
+a {
+    font-weight: 700;
+    transition: all 0.15s ease-in-out;
+}
+
+a:visited {
+    color: rgb(50,50,50);
+}
+
+body {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    color: rgb(50,50,50);
+    margin-bottom: 50px;
+}
+
+/* 2 Header settings */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    width: 40%;
+    display: inline-flex;
+    align-items: center;
+}
+
+nav ul {
+    height: 50%;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+nav li {
+    /* font-size: 1.1vw; */
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    min-width: 25%;
+    white-space: nowrap;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    /* border: solid 1px black; */
+}
+
+nav li:hover {
+    background-color: rgba(83, 83, 83, 0.68);
+    color: white;
+    cursor: pointer;
+}
+
+/* 3 About settings */
+
+#about-me {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-description {
+    width: 55%;
+    /* border: 1px solid green; */
+}
+
+.me-photo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    /* border: 1px solid black; */
+}
+
+.me-photo img {
+    margin-top: 19.92px;
+    max-width: 80%;
+    border-radius: 20px;
+}
+
+/* 4 Projects section settings */
+
+/* 4.1 First project */
+
+.project-data {
+    /* height: 0; */
+    /* overflow: hidden; */
+}
+
+/* Authors subsection */
+
+.project-authors {
+    width: 30%;
+}
+
+.author {
+    min-width: 180px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.author a {
+    height: fit-content;
+    width: 40px;
+}
+
+.author a:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 2px black);
+}
+
+.author img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Project description settings */
+
+a.link-to-game {
+    position: relative;
+    margin: 50px auto;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid black;
+    width: 30%;
+    min-width: fit-content;
+    height: auto;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    padding: 10px;
+}
+
+a.link-to-game:hover {
+    color: white;
+    background-color: rgba(86, 86, 86, 0.868);
+    transform: scale(1.03);
+}
+
+a.link-to-game:active {
+    transform: scale(0.95);
+}
+
+.carousel-container {
+    /* overflow: hidden; */
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel-slides {
+    display: flex;
+    min-width: 100%;
+}
+
+.carousel-slide {
+    width: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    font-size: 3rem;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+    background: rgb(207,207,207);
+    background: radial-gradient(circle, rgba(207,207,207,0.8) 42%, rgba(0,0,0,0) 100%);
+    color: black;
+}
+
