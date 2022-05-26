@@ -97,11 +97,44 @@ nav li:hover {
 
 /* 4 Projects section settings */
 
+.project-heading-btn {
+    max-width: fit-content;
+}
+
+
+.project-heading-btn h3 {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-heading-btn h3::before {
+    left: 0;
+    top: 0;
+    content: '⚪';
+    font-size: 0.7rem;
+    margin-right: 10px;
+    /* background-color: black; */
+}
+
+.project-heading-btn h3:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(100, 100, 100, 0.75);
+    filter: drop-shadow(0 0 2px rgb(121, 121, 121));
+}
+
 /* 4.1 First project */
 
 .project-data {
-    /* height: 0; */
-    /* overflow: hidden; */
+    height: 0;
+    overflow: hidden;
+}
+
+.project-data.opened {
+    height: 1000px;
 }
 
 /* Authors subsection */
@@ -156,7 +189,7 @@ a.link-to-game {
 
 a.link-to-game:hover {
     color: white;
-    background-color: rgba(86, 86, 86, 0.868);
+    background-color: rgba(86, 86, 86, 0.8);
     transform: scale(1.03);
 }
 
@@ -165,22 +198,27 @@ a.link-to-game:active {
 }
 
 .carousel-container {
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 60%;
     position: relative;
     margin: 0 auto;
+    /* border: 5px solid green; */
 }
 
 .carousel-slides {
-    display: flex;
-    min-width: 100%;
+    display: inline-flex;
+    width: 100%;
+
 }
 
 .carousel-slide {
     width: 100%;
+    
+    object-fit: cover;
 }
 
 .carousel-controls {
+
     position: absolute;
     top: 50%;
     left: 0;
@@ -194,20 +232,35 @@ a.link-to-game:active {
 
 }
 
-.fa-chevron-left,
-.fa-chevron-right {
+.carousel-btn-left,
+.carousel-btn-right {
     display: flex;
     align-items: center;
-    color: aliceblue;
-    font-size: 3rem;
     height: 100%;
     padding: 0 10px;
+    transition: all 0.3s ease-in-out;
 }
 
-.fa-chevron-left:hover,
-.fa-chevron-right:hover {
-    background: rgb(207,207,207);
-    background: radial-gradient(circle, rgba(207,207,207,0.8) 42%, rgba(0,0,0,0) 100%);
+.carousel-btn-left:hover,
+.carousel-btn-right:hover {
+    background-color: rgb(200, 200, 200, 0.75);
+    cursor: pointer;
+}
+
+.carousel-btn-left:hover .fa-chevron-left, 
+.carousel-btn-right:hover .fa-chevron-right {
     color: black;
 }
+.fa-chevron-left,
+.fa-chevron-right {
+    color: aliceblue;
+    font-size: 3rem; 
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
 
