@@ -7,11 +7,18 @@
     font-family: 'Roboto', sans-serif;
     text-align: justify; /* For Edge */
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
     font-weight: 700;
     transition: all 0.15s ease-in-out;
+}
+
+a:active,
+a:link,
+a:visited {
+    color: rgb(50,50,50);
 }
 
 a:visited {
@@ -20,10 +27,15 @@ a:visited {
 
 body {
     position: relative;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     color: rgb(50,50,50);
     margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+p, li, a {
+    font-size: 18px;
 }
 
 /* 2 Header settings */
@@ -49,8 +61,17 @@ nav ul {
     
 }
 
+nav a {
+    text-decoration: none;
+    font-weight: 400;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 nav li {
-    /* font-size: 1.1vw; */
     display: flex;
     height: 100%;
     justify-content: center;
@@ -60,13 +81,16 @@ nav li {
     white-space: nowrap;
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
-    /* border: solid 1px black; */
 }
 
-nav li:hover {
+nav a:hover {
     background-color: rgba(83, 83, 83, 0.68);
     color: white;
     cursor: pointer;
+}
+
+article {
+    padding-top: 30px;
 }
 
 /* 3 About settings */
@@ -86,7 +110,6 @@ nav li:hover {
     justify-content: center;
     align-items: flex-start;
     width: 40%;
-    /* border: 1px solid black; */
 }
 
 .me-photo img {
@@ -99,6 +122,8 @@ nav li:hover {
 
 .project-heading-btn {
     max-width: fit-content;
+    user-select: none;
+    cursor: pointer;
 }
 
 
@@ -108,7 +133,9 @@ nav li:hover {
     width: fit-content;
     padding: 15px;
     border-radius: 20px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .project-heading-btn h3::before {
@@ -117,7 +144,6 @@ nav li:hover {
     content: '⚪';
     font-size: 0.7rem;
     margin-right: 10px;
-    /* background-color: black; */
 }
 
 .project-heading-btn h3:hover {
@@ -126,15 +152,18 @@ nav li:hover {
     filter: drop-shadow(0 0 2px rgb(121, 121, 121));
 }
 
-/* 4.1 First project */
+/* Project data section */
 
 .project-data {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
+    will-change: transform;
+    transition: all 0.1s ease-in-out;
 }
 
 .project-data.opened {
-    height: 1000px;
+    max-height: 1200px;
+    margin-bottom: 20px;
 }
 
 /* Authors subsection */
@@ -169,7 +198,7 @@ nav li:hover {
 
 /* Project description settings */
 
-a.link-to-game {
+a.link-to-project {
     position: relative;
     margin: 50px auto;
     font-size: 1.3rem;
@@ -187,13 +216,13 @@ a.link-to-game {
     padding: 10px;
 }
 
-a.link-to-game:hover {
+a.link-to-project:hover {
     color: white;
     background-color: rgba(86, 86, 86, 0.8);
     transform: scale(1.03);
 }
 
-a.link-to-game:active {
+a.link-to-project:active {
     transform: scale(0.95);
 }
 
@@ -202,34 +231,31 @@ a.link-to-game:active {
     width: 60%;
     position: relative;
     margin: 0 auto;
-    /* border: 5px solid green; */
+    margin-bottom: 20px;
 }
 
 .carousel-slides {
     display: inline-flex;
     width: 100%;
-
+    transition: transform 0.3s ease;
 }
 
 .carousel-slide {
     width: 100%;
-    
     object-fit: cover;
+    
 }
 
 .carousel-controls {
-
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .carousel-btn-left,
@@ -239,28 +265,155 @@ a.link-to-game:active {
     height: 100%;
     padding: 0 10px;
     transition: all 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .carousel-btn-left:hover,
 .carousel-btn-right:hover {
-    background-color: rgb(200, 200, 200, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     cursor: pointer;
 }
 
 .carousel-btn-left:hover .fa-chevron-left, 
 .carousel-btn-right:hover .fa-chevron-right {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .fa-chevron-left,
 .fa-chevron-right {
-    color: aliceblue;
+    color: rgb(40, 40, 40);
     font-size: 3rem; 
     transition: all 0.3s ease-in-out;
 }
 
 
+/* Setting for skills section */ 
+.skills-container {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-images {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.skills-images img {
+    width: 8%;
+}
+
+/* Footer settings */
+
+.contacts {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.contacts a {
+    display: block;
+    width: 5%;
+}
+
+.contacts img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1200px) {
+    body {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        width: 100%;
+    }
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        width: 70%;
+    }
+
+    #about-me {
+        flex-wrap: wrap;
+        padding-top: 0;
+        justify-content: center;
+    }
+
+    .about-description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .me-photo {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    p, li, a {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        width: 90%;
+    }
+
+    a.link-to-project {
+        width: 20%;
+        font-size: 1rem;
+    }
 
 
+    .carousel-container {
+        width: 80%;
+    }
 
+    .skills-images img {
+        width: 15%;
+    }
 
+    .contacts a {
+        width: 10%;
+    }
+}
 
+@media screen and (max-width: 468px) {
+    nav ul {
+        width: 100%;
+    }
+
+    .me-photo {
+        width: 60%;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+}

@@ -1,64 +1,52 @@
-window.addEventListener('load', function() {
-    console.log('carousel loaded')
-    // const carouselContainer = document.querySelector('.carousel-container');
-    const carouselSlide = document.querySelector('.carousel-slides');
-    const prevBtn = document.querySelector('.carousel-btn-left');
-    const nextBtn = document.querySelector('.carousel-btn-right');
-    
-    let carouselImages = document.querySelectorAll('.carousel-slide');
-    let index = 1;
-    let firstClone = carouselImages[0].cloneNode(true);
-    let lastClone = carouselImages[carouselImages.length - 1].cloneNode(true);
 
-    firstClone.id = 'first-clone';
-    lastClone.id = 'last-clone';
+const sliderContainers = document.querySelectorAll('[data-slider-container');
 
-    carouselSlide.append(firstClone);
-    carouselSlide.prepend(lastClone);
+let imageWidth;
 
-    let slideWidth = carouselImages[index].clientWidth;
 
-    window.addEventListener('resize', () => {
-        slideWidth = carouselImages[index].clientWidth;
-        carouselSlide.style.transform = `translateX(${-slideWidth * index}px)`;
-    })
+sliderContainers.forEach(container => {
+    const sliderBtns = container.querySelectorAll('[data-slider-btn]');
+    const slider = container.querySelector('[data-slides]')
+    const sliderImages = Array.from(slider.querySelectorAll('[data-slider-image'));
+    let index = 0;
+    let offset;
 
-    carouselSlide.style.transform = `translateX(${-slideWidth * index}px)`;
+    imageWidth = getImageWidth(sliderImages);
 
-    // re-assigning variable so it contains all slides including pre/appended
-    carouselImages = document.querySelectorAll('.carousel-slide');
-
-    function moveToNextSlide () {
-        if (index >= carouselImages.length - 1) {
-            return;
-        };
-        index++;
-        carouselSlide.style.transform = `translateX(${-slideWidth * index}px)`;
-        carouselSlide.style.transition = '0.5s';
-    };
-
-    function moveToPrevSlide () {
-        if (index <= 0) {
-            return;
-        };
-        index--;
-        carouselSlide.style.transform = `translateX(${-slideWidth * index}px)`;
-        carouselSlide.style.transition = '0.5s';        
-    };
-
-    carouselSlide.addEventListener('transitionend', () => {
-        if (carouselImages[index].id === firstClone.id) {
-            carouselSlide.style.transition = 'none';
-            index = 1;
-            carouselSlide.style.transform = `translateX(${-slideWidth * index}px)`;
-        } else if (carouselImages[index].id === lastClone.id) {
-            carouselSlide.style.transition = 'none';
-            index = carouselImages.length - 2;
-            carouselSlide.style.transform = `translateX(${-slideWidth * index}px)`;            
-        };
+    sliderBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            index = index + getOffset(btn);
+            if (index <= 0) {
+                index = 0;
+            } else if (index > sliderImages.length - 1) {
+                index = sliderImages.length - 1;
+            };
+            changeImage(slider, index, imageWidth);
+        });
     });
 
-    nextBtn.addEventListener('click', moveToNextSlide);
-    prevBtn.addEventListener('click', moveToPrevSlide);
+    window.addEventListener('resize', ()=> {
+        imageWidth = getImageWidth(sliderImages);
+        changeImage(slider, index, imageWidth);
+    });
 });
 
+
+function getImageWidth(sliderImages) {
+    let computedWidth = sliderImages[0].clientWidth;
+    return computedWidth;
+};
+
+function getOffset (btn) {
+    let computeOffset;
+    if (btn.hasAttribute('data-next-image')) {
+        computeOffset = 1;
+    } else {
+        computeOffset = -1;
+    }
+    return computeOffset;
+}
+
+function changeImage(slider, index, imageWidth) {
+    slider.style.transform = `translateX(${imageWidth *-index}px)`
+}

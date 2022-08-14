@@ -13,10 +13,18 @@
         <h1>Roman Ponomarjov</h1>
         <nav>
             <ul>
-                <li>About me</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li>Contacts</li>
+                <li>
+                    <a href="#about-me">About me</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#contacts">Contacts</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -41,7 +49,7 @@
                     My objective to complete is to achieve sufficient knowledge and skills to start working as a junior developer.
                 </p>
                 <p>
-                    In my free time, I play compose and play music as well as read and play video games.
+                    In my free time, I compose and play music as well as read books and play video games.
                 </p>
             </div>
             <div class="me-photo">
@@ -50,7 +58,7 @@
         </article>
 
         <!-- Section with projects -->
-        <article class="projects">
+        <article id="projects">
             <h2>Projects</h2>
             
             <!-- 1st project -->
@@ -88,7 +96,7 @@
 
                     <div class="project-description">
                         <h3 class="heading-btn">Project Description</h4>
-                        <a class="link-to-game" href="https://mrfomkoe.github.io/" target="_blank" rel="noopener noreferrer">Check out the game!</a>
+                        <a class="link-to-project" href="https://mrfomkoe.github.io/" target="_blank" rel="noopener noreferrer">Check out the game!</a>
                         <div class="project-content">
 
                             <div class="project-text">
@@ -101,19 +109,19 @@
 
                 
 
-                            <div class="project-images carousel-container">
-                                <div class="carousel-slides">
-                                    <img class="carousel-slide" src="./media/images/game/game-1.jpg" alt="Game Menu">
-                                    <img class="carousel-slide" src="./media/images/game/game-2.jpg" alt="Rock Paper Scissors Game">
-                                    <img class="carousel-slide" src="./media/images/game/game-3.jpg" alt="Memory Card Game">
-                                    <img class="carousel-slide" src="./media/images/game/game-4.jpg" alt="Snake Game">
+                            <div class="project-images carousel-container" data-slider-container>
+                                <div class="carousel-slides" data-slides>
+                                    <img data-slider-image class="carousel-slide" src="./media/images/game/game-1.jpg" alt="Game Menu">
+                                    <img data-slider-image class="carousel-slide" src="./media/images/game/game-2.jpg" alt="Rock Paper Scissors Game">
+                                    <img data-slider-image class="carousel-slide" src="./media/images/game/game-3.jpg" alt="Memory Card Game">
+                                    <img data-slider-image class="carousel-slide" src="./media/images/game/game-4.jpg" alt="Snake Game">
                                 </div>
 
                                 <div class="carousel-controls">
-                                    <div class="carousel-btn-left">
+                                    <div class="carousel-btn-left" data-slider-btn>
                                         <i class="fa-solid fa-chevron-left"></i>
                                     </div>
-                                    <div class="carousel-btn-right">
+                                    <div class="carousel-btn-right" data-slider-btn data-next-image>
                                         <i class="fa-solid fa-chevron-right"></i>
                                     </div>
                                     
@@ -121,24 +129,92 @@
 
                             </div>
                         </div>
+                        
+                    </div>
+                    <hr>
+                </div>
+            </section>
+
+            <!-- 2nd project -->
+            <section class="jumis-hb-website">
+                <div class="project-heading-btn">
+                    <h3>Jumis-HB website</h3>
+                </div>
+                
+                <div class="project-data">
+                    
+                    <div class="project-authors">
+                        <h4>Project Authors</h4>
+                        <div class="author">
+                            <p>Roman Ponomarjov</p>
+                            <a href="https://github.com/MrFomkoe" target="_blank" rel="noopener noreferrer" title="GitHub profile">
+                                <img src="./media/images/contacts/github.png" alt="GitHub profile">
+                            </a>
+                        </div>
+                        <hr>
                     </div>
 
+                    <div class="project-description">
+                        <h3 class="heading-btn">Project Description</h4>
+                        <a class="link-to-project" href="https://jumis-hb.org/" target="_blank" rel="noopener noreferrer">Check out websiste</a>
+                        <div class="project-content">
+
+                            <div class="project-text">
+                                <p>The project is a website for a Latvian company SIA "Jumis-HB"</p>
+                                <p>The project was designed by the company's employee and developed solely by me</p>
+                                <p>The website contains some additional DOM manipulation elements made via javascript, such as:
+                                    <ul>
+                                        <li>Image sliders controlled by mouse (buttons) and touch swipes for mobile devices</li>
+                                        <li>Fullscreen images on mouse click / touch</li>
+                                        <li>*The code for a website is written in a way that new image sliders can be added in an unlimited amount (if classes to HTML elements are assigned according to existing code)</li>
+                                    </ul>
+                                </p>
+                            </div>
+
+                
+
+                            <div class="project-images carousel-container" data-slider-container>
+                                <div class="carousel-slides" data-slides>
+                                    <img data-slider-image class="carousel-slide" src="./media/images/jumis/jumis-1.jpg" alt="Main screen">
+                                    <img data-slider-image class="carousel-slide" src="./media/images/jumis/jumis-2.jpg" alt="Portfolio page image slider">
+                                    <img data-slider-image class="carousel-slide" src="./media/images/jumis/jumis-3.jpg" alt="Image slider full screen">
+                                </div>
+
+                                <div class="carousel-controls">
+                                    <div class="carousel-btn-left" data-slider-btn>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    <div class="carousel-btn-right" data-slider-btn data-next-image>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr>
                 </div>
             </section>
         </article>
 
-        <!-- <article class="skills">
-            <div class="skills-images">
-                <img src="./media/images/skills/html-image.png" alt="">
-                <img src="./media/images/skills/css-image.png" alt="">
-                <img src="./media/images/skills/js-image.png" alt="">
+        <article id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skills-images">
+                    <img src="./media/images/skills/html-image.png" alt="HTML skill">
+                    <img src="./media/images/skills/css-image.png" alt="CSS skill">
+                    <img src="./media/images/skills/js-image.png" alt="JavaScript skill">
+                </div>
             </div>
-        </article> -->
+        </article>
 
     </main>
-    <!-- <footer>
+    <footer id="contacts">
+        <h2>Contacts</h2>
         <div class="contacts">
-            <h2>Contact Data</h2>
+            
             <a href="mailto:romanponomarjov@gmail.com">
                 <img src="./media/images/contacts/email.png" alt="Email">
             </a>
@@ -155,9 +231,9 @@
                 <img src="./media/images/contacts/facebook.png" alt="facebook profile">
             </a>
         </div>
-    </footer> -->
+    </footer>
 
-    <script src="./scripts/carousel.js"></script>
-    <script src="./scripts/project-control.js"></script>
+    <script src="./scripts/carousel.js" defer></script>
+    <script src="./scripts/project-control.js" defer></script>
 </body>
 </html>
