@@ -50,3 +50,26 @@ function getOffset (btn) {
 function changeImage(slider, index, imageWidth) {
     slider.style.transform = `translateX(${imageWidth *-index}px)`
 }
+
+// Section for collapsing projects
+
+const projectBtn = document.querySelectorAll('.project-heading-btn');
+const projectContainers = document.querySelectorAll('.project-data');
+
+projectBtn.forEach(element => {
+    element.addEventListener('click', increaseHeight);
+});
+
+function increaseHeight (e) {
+    let targetElement = e.target;
+    let currentProjectContainer = targetElement.parentNode.nextElementSibling;
+    currentProjectContainer.classList.toggle('opened');
+};
+
+
+// Footer section date updater
+
+const currentDateContainer = document.getElementById('current-year');
+const currentDate = new Date().getFullYear();
+currentDateContainer.innerHTML = currentDate;
+currentDateContainer.style.fontSize = '14px'

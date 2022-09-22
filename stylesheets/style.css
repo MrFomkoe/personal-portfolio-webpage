@@ -34,7 +34,7 @@ body {
     margin-top: 50px;
 }
 
-p, li, a {
+p, li, a, span {
     font-size: 18px;
 }
 
@@ -113,8 +113,8 @@ article {
 }
 
 .me-photo img {
-    margin-top: 19.92px;
-    max-width: 80%;
+    margin-top: 20px;
+    max-width: 60%;
     border-radius: 20px;
 }
 
@@ -290,16 +290,20 @@ a.link-to-project:active {
 .skills-container {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .skills-images {
     display: inline-flex;
     justify-content: center;
-    gap: 10%;
+    gap: 5%;
 }
 
 .skills-images img {
-    width: 8%;
+    flex-shrink: 1;
+    width: 10%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Footer settings */
@@ -320,6 +324,12 @@ a.link-to-project:active {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.credidentials >* {
+    width: fit-content;
+    font-size: 14px;
+    margin: 40px auto;
 }
 
 /* Media queries */
@@ -362,10 +372,14 @@ a.link-to-project:active {
     .me-photo {
         width: 50%;
     }
+
+    .me-photo img {
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    p, li, a {
+    p, li, a, span {
         font-size: 16px;
     }
     
@@ -411,6 +425,10 @@ a.link-to-project:active {
 
     .me-photo {
         width: 60%;
+    }
+
+    .me-photo img {
+        max-width: 80%;
     }
 
     .carousel-container {

@@ -197,6 +197,69 @@
                     <hr>
                 </div>
             </section>
+
+            <!-- 3rd project -->
+            <section class="react-app">
+                <div class="project-heading-btn">
+                    <h3>Spotify playlist management app</h3>
+                </div>
+                
+                <div class="project-data">
+                    
+                    <div class="project-authors">
+                        <h4>Project Authors</h4>
+                        <div class="author">
+                            <p>Roman Ponomarjov</p>
+                            <a href="https://github.com/MrFomkoe" target="_blank" rel="noopener noreferrer" title="GitHub profile">
+                                <img src="./media/images/contacts/github.png" alt="GitHub profile">
+                            </a>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="project-description">
+                        <h3 class="heading-btn">Project Description</h4>
+                        <a class="link-to-project" href="https://jumis-hb.org/" target="_blank" rel="noopener noreferrer">Check out websiste</a>
+                        <div class="project-content">
+
+                            <div class="project-text">
+                                <p>The project is a web app that allows Spotify registered users to search for music, manage own playlists, and create new playlists. </p>
+                                <p>The project was created within the React course and further modified to contain additional features.</p>
+                                <p>The website dynamically re-renders as well as turns to Spotify API for obtainment and management of the data. The project uses the following methods:
+                                    <ul>
+                                        <li>Dynamic rendering of reusable React components</li>
+                                        <li>REST API for communication with server </li>
+                                        <li>Spotify player embedded for preview of searched tracks</li>
+                                    </ul>
+                                </p>
+                            </div>
+
+                
+
+                            <div class="project-images carousel-container" data-slider-container>
+                                <div class="carousel-slides" data-slides>
+                                    <img data-slider-image class="carousel-slide" src="./media/images/spotify/spotify-1.jpg" alt="New playlist creation">
+                                    <img data-slider-image class="carousel-slide" src="./media/images/spotify/spotify-2.jpg" alt="Users current playlists">
+                                    <img data-slider-image class="carousel-slide" src="./media/images/spotify/spotify-3.jpg" alt="Users playlist">
+                                </div>
+
+                                <div class="carousel-controls">
+                                    <div class="carousel-btn-left" data-slider-btn>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    <div class="carousel-btn-right" data-slider-btn data-next-image>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                </div>
+            </section>
         </article>
 
         <article id="skills">
@@ -206,6 +269,7 @@
                     <img src="./media/images/skills/html-image.png" alt="HTML skill">
                     <img src="./media/images/skills/css-image.png" alt="CSS skill">
                     <img src="./media/images/skills/js-image.png" alt="JavaScript skill">
+                    <img src="./media/images/skills/react-image.png" alt="React skill">
                 </div>
             </div>
         </article>
@@ -231,9 +295,12 @@
                 <img src="./media/images/contacts/facebook.png" alt="facebook profile">
             </a>
         </div>
+
+        <div class="credidentials">
+            <p> &copy; <span id="current-year"></span> by Roman Ponomarjov </p>
+        </div>
     </footer>
 
-    <script src="./scripts/carousel.js" defer></script>
-    <script src="./scripts/project-control.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
 </body>
 </html>
